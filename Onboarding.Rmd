@@ -1,0 +1,43 @@
+---
+title: "Onboarding Test"
+author: "Mikaela Olaya"
+date: "1/9/2022"
+output:
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE)
+```
+
+## Welcome to INFO 3221
+
+This document is designed to test if your set-up is successful. Please follow the instructions below. Replace the name of author with yours and date with today above. Do not change other information.    
+
+#Step1. Table
+
+- Place the cursor at the end of the code (right after 'summary(cars)') and hit ctrl+enter (Windows), command+enter(Mac). You will get a table. 
+
+```{r cars}
+summary(cars)
+```
+
+#Step2. Plot
+
+- Place the cursor at the end of the code (right after 'plot(pressure)') and hit ctrl+enter (Windows), command+enter(Mac). You will have a figure. 
+
+```{r pressure, echo=TRUE}
+plot(pressure)
+```
+
+#Step3. Save this file as onboarding.Rmd
+
+- Tip: You will have a bunch of codes every class, so it would be better for you to create a folder named 'INFO3221' and then create subfolders like 'Class-1' for all the classes during the semester.
+
+#Step4. Click the 'Knit' icon above, and then you will automatically 1) have a PDF pop-up window and 2) be able to find 'onboarding.pdf' in the same folder where you saved 'onboarding.Rmd' file. 
+
+- If 'Knit' icon does not work, please let me know. 
+
+#Step5. Upload both 1) onboarding.Rmd and 2) onboarding.pdf files to Canvas > Modules > Class-1 > System set-up > Onboarding test assignment.
+
+#That's it. Thank you. 
