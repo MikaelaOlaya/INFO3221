@@ -1,0 +1,57 @@
+---
+title: "HW(1) Project"
+author: "Mikaela Olaya" # your name
+date: "2/5/2022" # today
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE, eval = TRUE)
+```
+
+# Run this code first
+```{r, include=FALSE}
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2') 
+```
+
+
+# Q1. Replace the author name with your name in YAML part above. 
+
+# Q2. Find `Position Adjustments` section from the cheat sheet and apply one of its methods with your comment
+ 
+```{r}
+q2 <- ggplot(mpg, aes(fl, fill = drv)) # creating my variable `q2` # Do not modify this line
+```
+
+```{r, out.width='50%'}
+q2 + geom_bar(position= "dodge")
+```
+
+# Q3. Find `ONE VARIABLE continuous` section and apply one of its methods with your comment 
+```{r}
+q3 <- ggplot(mpg, aes(hwy)) # creating my variable `q3` # Do not modify this line
+```
+
+```{r, out.width='50%'}
+q3 + geom_freqpoly()
+```
+
+# Q4. Find `COLOR AND FILL SCALES (CONTINUOUS)` section and apply one of its methods with your comment 
+```{r}
+q4 <- q3 + geom_dotplot(aes(fill = ..x..)) # Creating my variable `q4` # Do not modify this line
+```
+
+```{r, out.width='50%'}
+q4 +scale_fill_gradient2(low= "red", high= "blue", mid= "white", midpoint=25)
+```
+
+# Q5. Find `both discrete` section and apply one of its methods with your comment 
+```{r}
+q5 <- ggplot(mpg, aes(cyl, hwy)) # Creating my variable `q5` # Do not modify this line
+```
+
+```{r, out.width='50%'}
+q5 +geom_jitter()
+```
+
+### *End of document*
