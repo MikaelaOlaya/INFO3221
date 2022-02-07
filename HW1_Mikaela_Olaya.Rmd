@@ -1,0 +1,132 @@
+---
+title: "HW(1)"
+author: "Mikaela Olaya" # your name
+date: "2/5/2022" # today
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = TRUE, eval = TRUE)
+```
+
+#Run this code first
+```{r, include=FALSE}
+if (!require('ggplot2')) install.packages('ggplot2'); library('ggplot2') 
+```
+
+***
+### If you don't know the answer, leave it blank. If you are caught cheating, you will be given minus 50 points.   
+***
+
+Q1. Replace the author name with your name in YAML part above. 
+
+Q2. Store five values `82.0, 31.2, 98.2, 19.4, 72.6` into the `scores` variable.
+```{r}
+scores <- c(82.0, 31.2, 98.2, 19.4, 72.6)
+```
+
+Q3. Write a code that finds the minimun value of `scores` that you have created in Q2.
+```{r}
+min(scores)
+```
+
+Q4. Assign the value of 4 raised to 2 to a variable `generation`. Then, print out the value of `generation`.
+```{r}
+generation <- 4^2
+print(generation)
+```
+
+Q5. Assign the value of square root 81 to a variable `nine`, and print out `nine`.
+```{r}
+nine <- sqrt(81)
+print(nine)
+```
+
+Q6. Store a text `mozart` into the variable `piano`.
+```{r}
+piano <- "mozart"
+```
+
+Q7. What are three components for a single plot of `ggplot2` package? 
+```{r}
+
+#Data, Mapping, and Geom 
+
+```
+
+Q8. A line of code that shows `presidential` data as a table
+```{r}
+View(presidential)
+```
+
+Q9. Create a matrix with 4 rows that contain the numbers 1 up to 12
+```{r}
+matrix(1:12, byrow= FALSE, nrow=4)
+```
+
+Q10. A line of code that assigns `displ` column as `x-axis` and `hwy` column as `y-axis` of `mpg` data to a variable `mpg_plot` using `ggplot2` package
+```{r}
+mpg_plot <- ggplot(data=mpg, aes(x= displ, y= hwy))
+```
+
+Q11. Two lines of code that create a scatter plot of a variable `mpg_plot` that you have made in Q10 
+```{r}
+mpg_plot+
+  geom_point()
+```
+
+Q12. Three lines of code that create subplots (four rows) by `class` column, using two lines of code for Q10.
+```{r}
+mpg_plot +
+  geom_point()+
+  facet_wrap(~class, nrow=4)
+```
+
+Q13. A line of code that returns dimension information of `presidential` data
+```{r}
+dim(presidential)
+```
+
+Q14. What are the unique values of `party` column of `presidential` data?
+```{r}
+unique(presidential$party)
+```
+
+Q15. Two lines of code that will directly create a simple stacked bar plot that shows the count by `class` column of `mpg` data with filling color by `trans` column
+
+```{r}
+ggplot(data=mpg, aes(x=class, fill= trans))+
+  geom_bar()
+```
+
+Q16. A line of code that assigns `state` column as `x` position of `midwest` data to a variable `midwest_plot` using `ggplot2` package
+```{r} 
+midwest_plot <- ggplot(data=midwest,aes(x= state))
+```
+
+Q17. Five lines of code that will return a bar plot of the `midwest_plot` variable with a title `Plot of count by state`. X-axis is labeled as `state` and y-axis as `count`. 
+```{r}
+midwest_plot +
+  geom_bar()+
+  ggtitle("Plot of count by state")+
+  xlab("state")+
+  ylab("count")
+```
+
+Q18. What is the name of 7th column of `diamonds` dataset?
+```{r}
+colnames(diamonds[,7])
+```
+
+Q19. How many columns and rows does `midwest` data have?
+```{r}
+dim(midwest)
+```
+
+Q20. Two different commands for a quick overview of `mpg` data that we have learned in our class
+```{r}
+summary(mpg)
+str(mpg)
+```
+
+### *End of document*
